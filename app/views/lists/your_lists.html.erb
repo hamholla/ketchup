@@ -4,7 +4,9 @@
 	<div class="collection with-header">
 		<h4 class="collection-header"><%= list.name %></h4>
 			<% list.items.each do |item| %>
-			      <a href="<%item.link %>" class="collection-item"><%= item.name%></a>
+			      <a href="<%= item.link %>" class="collection-item"><%= item.name%></a>
 			<% end %>
 	</div>
 <% end %>
+
+<%= link_to 'New List', new_list_path %>

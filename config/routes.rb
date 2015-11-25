@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'welcome/index'
+  get 'about/index'
 
+  devise_for :users
   get 'your_lists' => 'ists#your_lists'
 
   resources :items
