@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   get 'about/index'
 
   devise_for :users
-  get 'your_lists' => 'ists#your_lists'
+  get 'your_lists' => 'lists#your_lists'
 
   resources :items
   resources :lists
 
-  root 'lists#your_lists'
+  root 'lists#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
