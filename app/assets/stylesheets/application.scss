@@ -18,9 +18,12 @@
 $primary-color: color("red", "darken-1") !default;
 @import 'materialize';
 
+.with-header {
+	padding-bottom: 0px;
+}
+
 .bottle {
 	padding: 0px;
-	height: 10%;
 }
 
 .cant-see-me {

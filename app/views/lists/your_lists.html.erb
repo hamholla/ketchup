@@ -1,8 +1,15 @@
 <h1><%= current_user.username %>'s Lists</h1>
 
 <% current_user.lists.each do |list| %>
-	<div class="collection with-header">
-		<h4 class="collection-header red-text"><%= list.name %></h4>
+	<div class="collection with-header hoverable">
+	      <div class="row collection-header">
+		      <div class="col s8">
+		      		<h4><%= link_to list.name, list, class: "red-text" %></h4>
+		      </div>
+	      	      <div class="col s4">
+			<h4><%= link_to list.user.username, user_lists_path(id: list.user.id), class:"right teal-text flow-text" %></h4>
+	      	      </div>
+	      </div>
 			<% list.items.each do |item| %>
 			      <a href="<%= item.link %>" class="collection-item"><%= item.name%></a>
 			<% end %>
