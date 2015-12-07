@@ -1,0 +1,11 @@
+
+<h1><%= @user.username %>'s Lists</h1>
+
+<% @user.lists.each do |list| %>
+      <div class="collection with-header">
+        <h4 class="collection-header"><%= link_to list.name, list, class: "red-text" %></h4>
+          <% list.items.each do |item| %>
+                <a href="<%= item.link %>" class="collection-item teal-text"><%= item.name%></a>
+          <% end %>
+      </div>
+    <% end %>

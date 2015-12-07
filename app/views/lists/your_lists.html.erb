@@ -2,7 +2,7 @@
 
 <% current_user.lists.each do |list| %>
 	<div class="collection with-header">
-		<h4 class="collection-header"><%= list.name %></h4>
+		<h4 class="collection-header red-text"><%= list.name %></h4>
 			<% list.items.each do |item| %>
 			      <a href="<%= item.link %>" class="collection-item"><%= item.name%></a>
 			<% end %>

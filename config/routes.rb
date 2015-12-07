@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'your_lists' => 'lists#your_lists'
+  get 'user_lists' => 'lists#user_lists'
 
   resources :items
   resources :lists

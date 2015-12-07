@@ -4,9 +4,9 @@
 
     <% @lists.each do |list| %>
       <div class="collection with-header">
-        <h4 class="collection-header"><%= list.name %></h4>
+        <h4 class="collection-header"><%= link_to list.name, list, class: "red-text" %><%= link_to list.user.username, user_lists_path(id: list.user.id), class:"right teal-text" %></h4>
           <% list.items.each do |item| %>
-                <a href="<%= item.link %>" class="collection-item"><%= item.name%></a>
+                <a href="<%= item.link %>" class="collection-item teal-text"><%= item.name%></a>
           <% end %>
       </div>
     <% end %>

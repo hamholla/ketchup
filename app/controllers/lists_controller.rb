@@ -17,6 +17,10 @@ class ListsController < ApplicationController
   def your_lists
   end
 
+  def user_lists
+    @user = User.find(params[:id])
+  end
+
   # GET /lists/new
   def new
     @list = List.new
